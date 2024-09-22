@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux'
+import store from './store/store';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { interceptor } from './components/utils/axiosInterceptor';
+
+console.log("!!!!! ----weather_forecast-v0.1 ---- !!!!!")
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const App = React.lazy(() => import("./App"));
+
+interceptor()
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Provider store={store}>
+    <Suspense fallback={<div></div>}>
+      <App />
+    </Suspense>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
