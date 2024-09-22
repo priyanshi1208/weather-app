@@ -2,19 +2,23 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyle = makeStyles({
   weatherCard: {
-    width: '350px',
-    padding: '16px',
-    margin: '56px auto',
-    textAlign: 'center',
-    backgroundColor: '#f0f4f8',
-    borderRadius: '12px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "10px",
+    margin: "10px",
+    borderRadius: "8px",
+    backgroundColor: "#f5f5f5 !important",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    textAlign: "center",
+    width: "40%",
+    fontFamily : 'Open Sans !important',
+    minHeight : '200px !important'
   },
   toggleBar: {
-    backgroundColor :'white !important'
+    backgroundColor :'white !important',
+    // width : '18%'
   },
   header: {
     display: "flex",
@@ -25,7 +29,7 @@ export const useStyle = makeStyles({
     // maxWidth: "800px", // Limit the width of the container
   },
   city: {
-    fontSize: '2.5rem !important',
+    fontSize: '40px !important',
     fontWeight: 'bold !important',
     marginBottom: '8px !important',
     fontFamily : 'Open Sans !important'
@@ -75,7 +79,7 @@ export const useStyle = makeStyles({
 export const searchUsestyle = makeStyles({
   container: {
     position: "relative",
-    width: "100%",
+    // width: "%",
     maxWidth: "250px", // Limit the maximum width of the dropdown
   },
   input: {
